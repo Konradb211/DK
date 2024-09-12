@@ -29,9 +29,8 @@ const Navigation = () => {
 			</div>
 
 			{/* desktopNav */}
-			<div className='hidden sm:flex justify-between w-full'>
-				<h2 className='text-lg font-semibold'>logo</h2>
-				<div className='flex gap-8'>
+			<div className='hidden sm:flex items-center justify-center w-full'>
+				<div className='flex gap-8 bg-[#b5e3ff] border-[2.8px] border-solid border-[#0AA3FF] rounded-full px-12 py-1'>
 					{navLinks.map(link => (
 						<Link
 							key={link.title}
