@@ -7,9 +7,9 @@ import { useState } from "react"
 const Navigation = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<nav className='max-w-screen-xl mx-auto px-4 py-4'>
+		<nav className=' bg-white fixed top-0 left-0 right-0 px-2 z-10 '>
 			{/* mobileNav */}
-			<div className='sm:hidden'>
+			<div className='sm:hidden max-width'>
 				<div className='flex items-center justify-between w-full'>
 					<h2 className='text-lg font-semibold'>logo</h2>
 					<Hamburger duration={0.2} toggled={isOpen} toggle={setIsOpen} />
@@ -29,13 +29,14 @@ const Navigation = () => {
 			</div>
 
 			{/* desktopNav */}
-			<div className='hidden sm:flex items-center justify-center w-full'>
-				<div className='flex gap-8 bg-[#b5e3ff] border-[2.8px] border-solid border-[#0AA3FF] rounded-full px-12 py-1'>
+			<div className='hidden sm:flex items-center justify-between w-full max-width group'>
+				<h2>logo</h2>
+				<div className='flex'>
 					{navLinks.map(link => (
 						<Link
 							key={link.title}
 							href={link.href}
-							className='text-base lg:text-lg xl:text-xl text-gray-800'>
+							className='text-base lg:text-lg xl:text-xl text-gray-800 hover:bg-mainGray py-4 px-7 rounded transition-all duration-300 group-hover:scale-95 hover:!scale-100 hover:font-medium scale-100'>
 							{link.title}
 						</Link>
 					))}
