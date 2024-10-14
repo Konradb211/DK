@@ -10,6 +10,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				mainGray: "#D9D9D9",
+				accent: "#FCD34D",
 			},
 		},
 	},

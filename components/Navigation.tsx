@@ -7,7 +7,7 @@ import { useState } from "react"
 const Navigation = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<nav className=' bg-white fixed top-0 left-0 right-0 px-2 z-10 '>
+		<nav className=' bg-white fixed top-0 left-0 right-0 px-2 z-10 border-b-black border-[1px] '>
 			{/* mobileNav */}
 			<div className='sm:hidden max-width'>
 				<div className='flex items-center justify-between w-full'>
@@ -36,7 +36,7 @@ const Navigation = () => {
 						<Link
 							key={link.title}
 							href={link.href}
-							className='text-base lg:text-lg xl:text-xl text-gray-800 hover:bg-mainGray py-4 px-7 rounded transition-all duration-300 group-hover:scale-95 hover:!scale-100 hover:font-medium scale-100'>
+							className='text-base lg:text-lg xl:text-xl text-gray-800 hover:bg-accent py-4 px-7 rounded transition-all duration-300 group-hover:scale-95 hover:!scale-100 hover:font-medium scale-100'>
 							{link.title}
 						</Link>
 					))}

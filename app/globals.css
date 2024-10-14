@@ -3,19 +3,56 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "Roboto Flex";
+	font-family: "BasementGrotesque";
+	src: url("/fonts/BasementGrotesque-Black_v1.202.woff2") format("woff2"),
+		url("/fonts/BasementGrotesque-Black_v1.202.woff") format("woff"),
+		url("/fonts/BasementGrotesque-Black_v1.202.otf") format("opentype");
+	font-weight: 900;
 	font-style: normal;
-	font-weight: 100 1000;
-	font-stretch: 0% 200%;
-	src: url(https://fonts.gstatic.com/s/robotoflex/v9/NaNeepOXO_NexZs0b5QrzlOHb8wCikXpYqmZsWI-__OGfttPZktqc2VdZ80KvCLZaPcSBZtOx2MifRuWR28sPJtUMbsFEK6cRrleUx9Xgbm3WLHa_F4Ep4Fm0PN19Ik5Dntczx0wZGzhPlL1YNMYKbv9_1IQXOw7AiUJVXpRJ6cXW4O8TNGoXjC79QRyaLshNDUf9-EmFw.woff2)
-		format("woff2");
+}
+@font-face {
+	font-family: "Aileron";
+	src: url("/fonts/aileron.regular.oft") format("oft");
 }
 
+body {
+	font-family: "BasementGrotesque", sans-serif;
+	line-height: 1.3;
+}
+
+.headerFontStyle {
+	line-height: 1.2;
+}
 .max-width {
 	@apply max-w-[1440px] mx-auto;
 }
 
 .custom-stroke {
-	-webkit-text-stroke: 2px black;
+	-webkit-text-stroke: 3.2px black;
 	paint-order: stroke fill;
+}
+
+.text-underline {
+	position: relative;
+	display: inline-block;
+}
+
+.text-underline::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 9px;
+	width: 100%;
+	height: 16px;
+	background-color: #fcd34d;
+	z-index: -1;
+}
+
+.secondaryFont {
+	font-family: "Aileron", sans-serif;
+	font-weight: 500;
+}
+
+ul {
+	list-style-type: square;
 }
