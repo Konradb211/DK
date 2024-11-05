@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+	scroll-behavior: smooth;
+	scroll-margin-top:50px;
+}
+
 @font-face {
 	font-family: "BasementGrotesque";
 	src: url("/fonts/BasementGrotesque-Black_v1.202.woff2") format("woff2"),
@@ -55,4 +61,18 @@ body {
 
 ul {
 	list-style-type: square;
+}
+
+.perspective {
+	perspective: 1300px;
+}
+
+.transform1 {
+	transform: rotateX(0deg) rotateY(20deg);
+	transform-style: preserve-3d;
+}
+
+.transform2 {
+	transform: rotateX(0deg) rotateY(-20deg);
+	transform-style: preserve-3d;
 }
